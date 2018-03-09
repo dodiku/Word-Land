@@ -20,7 +20,7 @@ import numpy as np
 
 
 source_text = u""
-with codecs.open("../scripts/three_billboards_outside_ebbing_script.txt","r","utf-8") as raw:
+with codecs.open("../scripts/call_me_by_your_name_script.txt","r","utf-8") as raw:
     source_text += raw.read()
 
 # using nltk(natural language toolkit)
@@ -81,7 +81,7 @@ for sentence in sentences:
             break
 
 
-with open('../word_vector_data/three_billboards_outside_ebbing_gensim_result.json', 'w') as fp:
+with open('../word_vector_data/call_me_by_your_name_script.json', 'w') as fp:
     json.dump(word_vectors, fp,sort_keys=True, indent=4)
 
 

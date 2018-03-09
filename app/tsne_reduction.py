@@ -10,7 +10,7 @@ import numpy as np
 from sklearn.manifold import TSNE
 
 # Load raw json data
-raw_vectors =json.loads( open("../word_vector_data/three_billboards_outside_ebbing_gensim_result.json").read())
+raw_vectors =json.loads( open("../word_vector_data/call_me_by_your_name_script.json").read())
 
 # Create two list to store words and their vectors separately
 vector_list = list()
@@ -38,5 +38,5 @@ result_vectors = dict()
 for i in range(len(word_list)):
     result_vectors[word_list[i]] = sizedown_vector[i]
 
-with open('../word_vector_data/three_billboards_outside_ebbing_3d_vector_result.json', 'w') as fp:
+with open('../word_vector_data/call_me_by_your_name_script_tsne.json', 'w') as fp:
     json.dump(result_vectors, fp,sort_keys=True, indent=4)
